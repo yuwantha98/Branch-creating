@@ -67,3 +67,25 @@ const customers = [
 ];
 
 console.log(customers[0].name);
+
+document.addEventListener("DOMContentLoaded", function () {
+  let isSubscribed = false;
+  let subscriberCount = 0;
+  const subscribeButton = document.getElementById("subscribe");
+  const subscribersDisplay = document.getElementById("subscribers");
+
+  subscribeButton.addEventListener("click", function () {
+    if (isSubscribed) {
+      isSubscribed = false;
+      subscribeButton.textContent = "Subscribe";
+      subscribeButton.style.backgroundColor = "red";
+      subscriberCount--;
+    } else {
+      isSubscribed = true;
+      subscribeButton.textContent = "Unsubscribe";
+      subscribeButton.style.backgroundColor = "gray";
+      subscriberCount++;
+    }
+    subscribersDisplay.textContent = `Subscribers: ${subscriberCount}`;
+  });
+});
