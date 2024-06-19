@@ -139,4 +139,27 @@ function addCustomer() {
   });
 
   console.log(customers);
+  showAllCustomers();
+}
+
+function showAllCustomers() {
+  let tblCustomers = document.getElementById("tblCustomers");
+
+  let tableBody = `<tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Address</th>
+                  </tr>`;
+
+  customers.forEach((data) => {
+    console.log(data);
+
+    tableBody += ` <tr>
+                      <td> ${data.name}</td>
+                      <td> ${data.age}</td>
+                      <td> ${data.address}</td>
+                  </tr>`;
+  });
+  tblCustomers.innerHTML = tableBody;
+  console.log(tableBody);
 }

@@ -12,3 +12,13 @@
   position: absolute;
   left: 55px;
 }
+#tblCustomers,
+#tblCustomers th,
+#tblCustomers td {
+  border: 1px solid black;
+}
+
+#tblCustomers {
+  margin-left: 250px;
+  margin-bottom: 30px;
+}
